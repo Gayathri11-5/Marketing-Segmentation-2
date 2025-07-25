@@ -7,7 +7,7 @@ def marketing(profile_data):
         recency=row.get("Recency",0)
         teenhome=row.get("Teenhome",0)
         web=row.get("NumWebPurchases",0)
-        if income > 0.8 and wines > 
+        if income > 0.8 and wines > 500:
             sug = f"cluster{idx} 💎 Offer premium memberships and loyalty rewards"
         elif recency < 10:
             sug =  f"cluster{idx}⏰ Send time-sensitive limited-time deals"
