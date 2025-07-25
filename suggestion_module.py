@@ -2,7 +2,7 @@ import pandas as pd
 def marketing(profile_data):
     sugesstions=[]
     for idx, row in profile_data.iterrows():
-        if row.get("Income", 0) > 0.20:
+        if row.get("Income", 0) < 0.20:
             sug = "💎 Offer premium memberships and loyalty rewards"
         elif row.get("Recency", 0) < 10:
             sug = "⏰ Send time-sensitive limited-time deals"
