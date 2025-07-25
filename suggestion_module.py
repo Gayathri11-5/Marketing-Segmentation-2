@@ -1,6 +1,6 @@
 import pandas as pd
 def marketing(profile_data):
-    sugesstions=[]
+    suggestions=[]
     for idx, row in profile_data.iterrows():
         income=row.get("Income", 0)
         wines=row.get("MntWines",0)
@@ -14,5 +14,5 @@ def marketing(profile_data):
             sug =  f"cluster{idx}🎮 Promote tech gadgets and teen-focused offers"
         else:
             sug="try discounts and offers for this season"
-        sugesstions.append(sug)
-    return pd.DataFrame({"Cluster":profile_data.index,"Suggested marketing strategy":sugesstions})
+        suggestions.append(sug)
+    return pd.DataFrame({"Cluster":profile_data.index,"Suggested marketing strategy":suggestions})
